@@ -1,9 +1,11 @@
 require("dotenv").config();
+
+const app = require('./src/app');   // ✅ FIRST define app
+
 const cors = require("cors");
 app.use(cors({
   origin: "*"
 }));
-const app = require('./src/app');
 
 const PORT = process.env.PORT || 3000;
 
